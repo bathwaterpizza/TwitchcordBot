@@ -1,0 +1,27 @@
+[31/12/2016 00:27:50] Programa Inicializado
+[31/12/2016 00:27:52] Conectado a Twitch "player2player"
+[31/12/2016 00:27:53] Conectado ao Discord "Player2Player"
+[31/12/2016 00:30:09] Programa Inicializado
+[31/12/2016 00:30:10] Conectado a Twitch "player2player"
+[31/12/2016 00:30:11] Conectado ao Discord "Player2Player"
+[31/12/2016 00:31:05] Programa Inicializado
+[31/12/2016 00:31:09] Programa Inicializado
+[31/12/2016 00:31:10] Conectado a Twitch "player2player"
+[31/12/2016 00:31:11] Conectado ao Discord "Player2Player"
+[31/12/2016 11:25:48] Inicializando Bots
+[31/12/2016 11:25:55] Inicializando Bots
+[31/12/2016 11:25:56] Conectado a Twitch "Player2Player"
+[31/12/2016 11:25:57] Conectado ao Discord "Player2Player"
+[31/12/2016 18:23:31] Conectado a Twitch "Player2Player"
+[31/12/2016 19:28:39] Inicializando Bots
+[31/12/2016 19:28:42] Conectado a Twitch "Player2Player"
+[31/12/2016 19:28:44] Conectado ao Discord "Player2Player"
+[31/12/2016 19:30:55][Discord] lookez >> usou comando "log>>enable"
+[31/12/2016 19:33:05] Inicializando Bots
+[31/12/2016 19:33:05] Conectado a Twitch "Player2Player"
+[31/12/2016 19:33:06] Conectado ao Discord "Player2Player"
+[31/12/2016 21:27:15] Inicializando Bots
+[31/12/2016 21:27:16] Conectado a Twitch "Player2Player"
+[31/12/2016 21:27:21] Inicializando Bots
+[31/12/2016 21:27:21] Conectado a Twitch "Player2Player"
+[31/12/2016 21:27:23] Conectado ao Discord "Player2Player"

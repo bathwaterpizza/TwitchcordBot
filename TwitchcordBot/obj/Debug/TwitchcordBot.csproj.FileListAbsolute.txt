@@ -1,7 +1,6 @@
 c:\users\root\documents\visual studio 2015\Projects\TwitchcordBot\TwitchcordBot\bin\Debug\TwitchcordBot.exe.config
 c:\users\root\documents\visual studio 2015\Projects\TwitchcordBot\TwitchcordBot\bin\Debug\TwitchcordBot.exe
 c:\users\root\documents\visual studio 2015\Projects\TwitchcordBot\TwitchcordBot\bin\Debug\TwitchcordBot.pdb
-c:\users\root\documents\visual studio 2015\Projects\TwitchcordBot\TwitchcordBot\bin\Debug\Discord.Net.Commands.dll
 c:\users\root\documents\visual studio 2015\Projects\TwitchcordBot\TwitchcordBot\bin\Debug\Discord.Net.dll
 c:\users\root\documents\visual studio 2015\Projects\TwitchcordBot\TwitchcordBot\bin\Debug\Newtonsoft.Json.dll
 c:\users\root\documents\visual studio 2015\Projects\TwitchcordBot\TwitchcordBot\bin\Debug\Nito.AsyncEx.Concurrent.dll

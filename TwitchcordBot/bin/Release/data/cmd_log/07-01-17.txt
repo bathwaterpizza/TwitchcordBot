@@ -1,0 +1,44 @@
+[07/01/2017 02:50:41] Inicializando Bots
+[07/01/2017 02:50:45] Inicializando Bots
+[07/01/2017 02:50:46] Conectado a Twitch "Player2Player"
+[07/01/2017 02:50:47] Conectado ao Discord "Player2Player"
+[07/01/2017 05:04:49] Inicializando Bots
+[07/01/2017 05:04:55] Inicializando Bots
+[07/01/2017 05:04:56] Conectado a Twitch "Player2Player"
+[07/01/2017 05:04:57] Conectado ao Discord "Player2Player"
+[07/01/2017 16:02:37] Inicializando Bots
+[07/01/2017 16:02:40] Conectado a Twitch "Player2Player"
+[07/01/2017 16:02:42] Conectado ao Discord "Player2Player"
+[07/01/2017 16:09:04] Inicializando Bots
+[07/01/2017 16:09:05] Conectado a Twitch "Player2Player"
+[07/01/2017 16:09:06] Conectado ao Discord "Player2Player"
+[07/01/2017 16:09:34] Inicializando Bots
+[07/01/2017 16:09:34] Conectado a Twitch "Player2Player"
+[07/01/2017 16:09:36] Conectado ao Discord "Player2Player"
+[07/01/2017 16:12:18] Inicializando Bots
+[07/01/2017 16:12:19] Conectado a Twitch "Player2Player"
+[07/01/2017 16:12:21] Conectado ao Discord "Player2Player"
+[07/01/2017 16:12:31] Inicializando Bots
+[07/01/2017 16:12:32] Conectado a Twitch "Player2Player"
+[07/01/2017 16:12:33] Conectado ao Discord "Player2Player"
+[07/01/2017 16:12:49] Inicializando Bots
+[07/01/2017 16:12:52] Conectado ao Discord "Player2Player"
+[07/01/2017 16:13:05] Inicializando Bots
+[07/01/2017 16:13:06] Conectado a Twitch "Player2Player"
+[07/01/2017 16:13:08] Conectado ao Discord "Player2Player"
+[07/01/2017 16:13:37] Inicializando Bots
+[07/01/2017 16:13:37] Conectado a Twitch "Player2Player"
+[07/01/2017 16:13:39] Conectado ao Discord "Player2Player"
+[07/01/2017 16:13:56] Inicializando Bots
+[07/01/2017 16:13:57] Conectado a Twitch "Player2Player"
+[07/01/2017 16:13:58] Conectado ao Discord "Player2Player"
+[07/01/2017 16:14:20] Inicializando Bots
+[07/01/2017 16:14:21] Conectado a Twitch "Player2Player"
+[07/01/2017 16:14:22] Conectado ao Discord "Player2Player"
+[07/01/2017 16:16:09] Inicializando Bots
+[07/01/2017 16:16:10] Conectado a Twitch "Player2Player"
+[07/01/2017 16:16:11] Conectado ao Discord "Player2Player"
+[07/01/2017 16:20:06] Inicializando Bots
+[07/01/2017 16:20:16] Inicializando Bots
+[07/01/2017 16:20:16] Conectado a Twitch "Player2Player"
+[07/01/2017 16:20:18] Conectado ao Discord "Player2Player"

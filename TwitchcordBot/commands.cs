@@ -1,13 +1,13 @@
 ﻿using System;
+using Discord;
 using System.IO;
 using TwitchLib.Events.Client;
 using System.Net;
 using Newtonsoft.Json;
-using Discord;
 using System.Net.Http;
 using RestSharp.Extensions.MonoHttp;
 
-// Change command permission checks to support IsModerator and HasRole<adm, mod>
+// Change command permission checks to support IsModerator and HasRole<adm or mod>
 static class TwitchBotCommands
 {
 	public static void Tags(OnMessageReceivedArgs eventArgs, string command)
@@ -15,21 +15,23 @@ static class TwitchBotCommands
 		switch (command)
 		{
 			case ">>":
-				string tag = eventArgs.ChatMessage.Message.Substring(2);
+				string tag = eventArgs.ChatMessage.Message.Substring(2).ToLower();
 
-				if (tag.Split(' ').Length > 1 || !CommandHelper.IsValidFilename(tag))
-				{
-					TwitchBot.twitchClient.SendMessage("@" + eventArgs.ChatMessage.DisplayName + " -> Tag não encontrada");
-					break;
-				}
-
-				if (!File.Exists("data/tags/" + tag + ".txt"))
+				if (tag.Split(' ').Length > 1 || !CommandHelper.IsValidFilename(tag) || !File.Exists("data/tags/" + tag + ".txt"))
 				{
 					TwitchBot.twitchClient.SendMessage("@" + eventArgs.ChatMessage.DisplayName + " -> Tag não encontrada");
 					break;
 				}
 
 				tag = File.ReadAllText("data/tags/" + tag + ".txt");
+
+				if (tag.Contains("http://") || tag.Contains("https://") || tag.Contains("www.")
+				|| tag.Contains(".com") || tag.Contains(".net") || tag.Contains(".co") || tag.Contains(".org"))
+				{
+					TwitchBot.twitchClient.SendMessage("@" + eventArgs.ChatMessage.DisplayName + " -> Links são proibidos.");
+					break;
+				}
+
 				TwitchBot.twitchClient.SendMessage(tag);
 				break;
 
@@ -40,7 +42,7 @@ static class TwitchBotCommands
 					break;
 				}
 
-				string addTag = eventArgs.ChatMessage.Message.Substring(10).Split(' ')[0];
+				string addTag = eventArgs.ChatMessage.Message.Substring(10).Split(' ')[0].ToLower();
 				if (!CommandHelper.IsValidFilename(addTag))
 				{
 					TwitchBot.twitchClient.SendMessage("@" + eventArgs.ChatMessage.DisplayName + " -> Tag inválida");
@@ -158,15 +160,9 @@ static class DiscordBotCommands
 		switch (command)
 		{
 			case ">>":
-				string tag = eventArgs.Message.Text.Substring(2);
+				string tag = eventArgs.Message.Text.Substring(2).ToLower();
 
-				if (tag.Split(' ').Length > 1 || !CommandHelper.IsValidFilename(tag))
-				{
-					eventArgs.Channel.SendMessage(eventArgs.User.Name + " -> Tag não encontrada");
-					break;
-				}
-
-				if (!File.Exists("data/tags/" + tag + ".txt"))
+				if (tag.Split(' ').Length > 1 || !CommandHelper.IsValidFilename(tag) || !File.Exists("data/tags/" + tag + ".txt"))
 				{
 					eventArgs.Channel.SendMessage(eventArgs.User.Name + " -> Tag não encontrada");
 					break;
@@ -183,7 +179,7 @@ static class DiscordBotCommands
 					break;
 				}
 
-				string addTag = eventArgs.Message.Text.Substring(10).Split(' ')[0];
+				string addTag = eventArgs.Message.Text.Substring(10).Split(' ')[0].ToLower();
 				if (!CommandHelper.IsValidFilename(addTag))
 				{
 					eventArgs.Channel.SendMessage(eventArgs.User.Name + " -> Tag inválida");
@@ -240,10 +236,11 @@ static class DiscordBotCommands
 		{
 			case "msg":
 				if (eventArgs.Message.Text.Contains("http://") || eventArgs.Message.Text.Contains("https://") || eventArgs.Message.Text.Contains("www.")
-				|| eventArgs.Message.Text.Contains(".com") || eventArgs.Message.Text.Contains(".net") || eventArgs.Message.Text.Contains(".co"))
+				|| eventArgs.Message.Text.Contains(".com") || eventArgs.Message.Text.Contains(".net") || eventArgs.Message.Text.Contains(".co")
+				|| eventArgs.Message.Text.Contains(".org"))
 				{
 					eventArgs.Channel.SendMessage(eventArgs.User.Name + " -> Links são proibidos.");
-					return;
+					break;
 				}
 
 				TwitchBot.twitchClient.SendMessage("(Discord) " + eventArgs.User.Name + ": " + eventArgs.Message.Text.Substring(12));
@@ -322,7 +319,7 @@ static class DiscordBotCommands
 				break;
 
 			case "image18+":
-				if (!DiscordBot.IsWhitelisted(eventArgs.User.Id))
+				if (!DiscordBot.IsWhitelisted(eventArgs.User.Id) && eventArgs.Channel.Id != 223232764944580609ul)
 				{
 					await eventArgs.Channel.SendMessage(eventArgs.User.Name + " -> Acesso negado");
 					break;

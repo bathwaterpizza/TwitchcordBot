@@ -1,0 +1,3 @@
+[14/01/2017 15:58:51] Inicializando Bots
+[14/01/2017 15:58:52] Conectado a Twitch "Player2Player"
+[14/01/2017 15:58:54] Conectado ao Discord "Player2Player"

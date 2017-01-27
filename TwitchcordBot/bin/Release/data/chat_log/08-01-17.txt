@@ -1,0 +1,11 @@
+[08/01/2017 00:42:48][Sub] Liam094: !discord
+[08/01/2017 00:42:48][Mod] Nightbot: Venha conversar com a gente! https://discordapp.com/download Assim que instalado, vá em configurações e vincule sua conta da Twitch ao Discord para entrar em nosso servidor. Lembrando que ele é aberto a todos. Use com respeito e moderação. https://discord.gg/eNGadqb
+[08/01/2017 14:04:42][Mod][Sub] Lordduque: l
+[08/01/2017 16:01:22] lookezbr: test
+[08/01/2017 16:16:22] lookezbr: >>maratona
+[08/01/2017 16:18:28] lookezbr: test
+[08/01/2017 16:18:31][Sub] lulinha_lula: !join
+[08/01/2017 16:51:12] lookezbr: tags>>list
+[08/01/2017 16:56:33] lookezbr: test
+[08/01/2017 16:56:38] lookezbr: [Global Admin]:[Sub] test : test
+[08/01/2017 17:21:32][Sub] lulinha_lula: test

@@ -1,0 +1,6 @@
+[11/01/2017 02:56:20] Inicializando Bots
+[11/01/2017 02:56:30] Inicializando Bots
+[11/01/2017 02:56:31] Conectado a Twitch "Player2Player"
+[11/01/2017 02:56:32] Conectado ao Discord "Player2Player"
+[11/01/2017 02:57:13][Discord] lookez -> usou comando "tags>>add discord https://discord.gg/eNGadqb"
+[11/01/2017 02:57:16][Discord] lookez -> usou comando ">>discord"

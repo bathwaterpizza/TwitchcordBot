@@ -6,7 +6,7 @@ static class DiscordBot
 	private static DiscordClient discordClient;
 	private static readonly ulong[] _discordWhitelist =
 	{
-		124155830655254530ul, // lookezbr
+		124155830655254530ul, // lookez
 		202857441757495296ul, // caricaz
 		189048718664663042ul, // betolixo
 		236347150181597185ul, // gglucascomap
@@ -31,7 +31,7 @@ static class DiscordBot
 
 		discordClient.MessageReceived += (s, e) =>
 		{
-			if (e.User.Name == "lkez") { return; }
+			if (e.User.Name == "lkez") { return; } // ignore commands from self
 
 			string channelMessage = e.Message.Text.ToLower();
 			// make command to clear bot messages (DownloadMessages, foreach -> if message is mine Delete)
@@ -56,18 +56,24 @@ static class DiscordBot
 			#endregion Commands
 
 			#region Log Command
-			string cmdLogStr = e.User.Name + " >> usou comando \"" + e.Message.Text + "\"";
+			string cmdLogStr = e.User.Name + " -> usou comando \"" + e.Message.Text + "\"";
 			Logger.LogCmd("[Discord] " + cmdLogStr);
 			#endregion Log Command
 		};
 
 		discordClient.ExecuteAndWait(async () =>
 		{
-			await discordClient.Connect(Config.DiscordToken, Config.DiscordTokenType);
+			try
+			{
+				await discordClient.Connect(Config.DiscordToken, Config.DiscordTokenType);
+			}
+			catch
+			{
+				Logger.LogAll("ERRO! Falha ao conectar com o Discord");
+			}
 			discordClient.SetGame("By Lookez");
 
 			Logger.LogAll("Conectado ao Discord \"Player2Player\"");
-			Console.WriteLine();
 		});
 	}
 }

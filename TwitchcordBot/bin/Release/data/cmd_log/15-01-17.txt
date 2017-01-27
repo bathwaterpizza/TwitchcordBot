@@ -1,0 +1,19 @@
+[15/01/2017 00:22:04] Inicializando Bots
+[15/01/2017 00:22:05] Conectado a Twitch "Player2Player"
+[15/01/2017 00:22:07] Conectado ao Discord "Player2Player"
+[15/01/2017 02:24:15] Conectado a Twitch "Player2Player"
+[15/01/2017 02:28:50] Conectado a Twitch "Player2Player"
+[15/01/2017 02:56:49] Inicializando Bots
+[15/01/2017 02:56:49] Conectado a Twitch "Player2Player"
+[15/01/2017 02:56:51] Conectado ao Discord "Player2Player"
+[15/01/2017 04:16:42] Conectado a Twitch "Player2Player"
+[15/01/2017 04:26:48] Inicializando Bots
+[15/01/2017 04:26:48] Conectado a Twitch "Player2Player"
+[15/01/2017 04:26:50] Conectado ao Discord "Player2Player"
+[15/01/2017 13:54:50] Inicializando Bots
+[15/01/2017 13:54:51] Conectado a Twitch "Player2Player"
+[15/01/2017 13:54:52] Conectado ao Discord "Player2Player"
+[15/01/2017 23:25:23] Conectado a Twitch "Player2Player"
+[15/01/2017 23:29:07] Inicializando Bots
+[15/01/2017 23:29:08] Conectado a Twitch "Player2Player"
+[15/01/2017 23:29:10] Conectado ao Discord "Player2Player"

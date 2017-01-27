@@ -27,11 +27,11 @@ static class BotMain
 		}
 	}
 
-	// Change command permission checks to support IsModerator and HasRole<adm, mod>
 	private static void Main()
 	{
 		Console.Title = "P2P Twitchcord Bot";
 		Console.OutputEncoding = System.Text.Encoding.UTF8;
+		Console.CursorVisible = false;
 		InitFiles();
 
 		Logger.LogAll("Inicializando Bots");

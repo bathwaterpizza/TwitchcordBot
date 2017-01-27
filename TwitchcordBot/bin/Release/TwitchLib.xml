@@ -354,6 +354,15 @@
         <member name="F:TwitchLib.Events.Client.OnNewSubscriberArgs.Channel">
             <summary>Property representing channel bot is connected to.</summary>
         </member>
+        <member name="T:TwitchLib.Events.Client.OnNowHostingArgs">
+            <summary>Args representing the detected hosted channel.</summary>
+        </member>
+        <member name="F:TwitchLib.Events.Client.OnNowHostingArgs.Channel">
+            <summary>Property the channel that received the event.</summary>
+        </member>
+        <member name="F:TwitchLib.Events.Client.OnNowHostingArgs.HostedChannel">
+            <summary>Property representing channel that is being hosted.</summary>
+        </member>
         <member name="T:TwitchLib.Events.Client.OnReSubscriberArgs">
             <summary>Args representing resubscriber event.</summary>
         </member>
@@ -599,6 +608,52 @@
         </member>
         <member name="F:TwitchLib.Events.PubSub.OnTimeoutArgs.TimedoutBy">
             <summary>Property representing the moderator that issued the command.</summary>
+        </member>
+        <member name="T:TwitchLib.Events.PubSub.OnUnbanArgs">
+            <summary>OnUnban event arguments class.</summary>
+        </member>
+        <member name="F:TwitchLib.Events.PubSub.OnUnbanArgs.UnbannedUser">
+            <summary>
+            Name of user that was unbanned.
+            </summary>
+        </member>
+        <member name="F:TwitchLib.Events.PubSub.OnUnbanArgs.UnbannedBy">
+            <summary>
+            Name of moderator that issued unban command.
+            </summary>
+        </member>
+        <member name="T:TwitchLib.Events.PubSub.OnUntimeoutArgs">
+            <summary>Untimeout argument class.</summary>
+        </member>
+        <member name="F:TwitchLib.Events.PubSub.OnUntimeoutArgs.UntimeoutedUser">
+            <summary>
+            User that was untimed out (ie unbanned for a timeout)
+            </summary>
+        </member>
+        <member name="F:TwitchLib.Events.PubSub.OnUntimeoutArgs.UntimeoutedBy">
+            <summary>
+            Moderator that issued the untimeout command.
+            </summary>
+        </member>
+        <member name="T:TwitchLib.Events.PubSub.OnViewCountArgs">
+            <summary>ViewCount arguments class.</summary>
+        </member>
+        <member name="F:TwitchLib.Events.PubSub.OnViewCountArgs.ServerTime">
+            <summary>Server time issued by Twitch.</summary>
+        </member>
+        <member name="F:TwitchLib.Events.PubSub.OnViewCountArgs.Viewers">
+            <summary>Number of viewers at current time.</summary>
+        </member>
+        <member name="T:TwitchLib.Events.PubSub.OnWhisperArgs">
+            <summary>[INCOMPLETE/NOT_FULLY_SUPPORTED]Whisper arguement class.</summary>
+        </member>
+        <member name="F:TwitchLib.Events.PubSub.OnWhisperArgs.Whisper">
+            <summary>Property representing the whisper object.</summary>
+        </member>
+        <member name="M:TwitchLib.Events.PubSub.OnWhisperArgs.#ctor">
+            <summary>
+             Whisper args class constructor.
+            </summary>
         </member>
         <member name="T:TwitchLib.Events.Services.FollowerService.OnNewFollowersDetectedArgs">
             <summary>Class representing event args for OnNewFollowersDetected event.</summary>
@@ -977,6 +1032,11 @@
             </summary>
             <param name="viewerToUnmod">Username of the viewer to remove moderator status from.</param>
             <param name="client">Client reference used to identify extension.</param>
+        </member>
+        <member name="M:TwitchLib.Extensions.Client.ReplyWhisperExt.ReplyToLastWhisper(TwitchLib.TwitchClient,System.String,System.Boolean)">
+            <summary>
+            SendWhisper wrapper method that will send a whisper back to the user who most recently sent a whisper to this bot.
+            </summary>
         </member>
         <member name="M:TwitchLib.Extensions.Client.SlowModeExt.SlowModeOn(TwitchLib.TwitchClient,TwitchLib.Models.Client.JoinedChannel,System.TimeSpan)">
             <summary>
@@ -1436,6 +1496,27 @@
         </member>
         <member name="M:TwitchLib.Models.API.Post.Comment.#ctor(Newtonsoft.Json.Linq.JToken)">
             <summary>Comment object constructor.</summary>
+        </member>
+        <member name="T:TwitchLib.Models.API.PostToChannelFeedResponse">
+            <summary>
+            Class representing a response from Twitch from posting to channel feed.
+            </summary>
+        </member>
+        <member name="P:TwitchLib.Models.API.PostToChannelFeedResponse.TweetUrl">
+            <summary>
+            String containing the tweet url generated if selected.
+            </summary>
+        </member>
+        <member name="P:TwitchLib.Models.API.PostToChannelFeedResponse.Post">
+            <summary>
+            Post object representing all details of the post sent to Twitch.
+            </summary>
+        </member>
+        <member name="M:TwitchLib.Models.API.PostToChannelFeedResponse.#ctor(Newtonsoft.Json.Linq.JToken)">
+            <summary>
+            PostToChannelFeedResponse constructor.
+            </summary>
+            <param name="jsonData"></param>
         </member>
         <member name="T:TwitchLib.Models.API.User">
             <summary>Class representing a User object returned from Twitch API.</summary>
@@ -1929,6 +2010,84 @@
         <member name="M:TwitchLib.Models.Client.ChannelState.#ctor(System.String)">
             <summary>ChannelState object constructor.</summary>
         </member>
+        <member name="T:TwitchLib.Models.Client.ChatCommand">
+            <summary>
+            Object representing a command received via Twitch chat.
+            </summary>
+        </member>
+        <member name="P:TwitchLib.Models.Client.ChatCommand.ChatMessage">
+            <summary>Property representing the chat message that the command came in.</summary>
+        </member>
+        <member name="P:TwitchLib.Models.Client.ChatCommand.Command">
+            <summary>Property representing the actual command (without the command suffix).</summary>
+        </member>
+        <member name="P:TwitchLib.Models.Client.ChatCommand.ArgumentsAsList">
+            <summary>Property representing all arguments received in a List form.</summary>
+        </member>
+        <member name="P:TwitchLib.Models.Client.ChatCommand.ArgumentsAsString">
+            <summary>Property representing all arguments received in a string form.</summary>
+        </member>
+        <member name="P:TwitchLib.Models.Client.ChatCommand.CommandIdentifier">
+            <summary>Property representing the command identifier (ie command suffix).</summary>
+        </member>
+        <member name="M:TwitchLib.Models.Client.ChatCommand.#ctor(System.String,TwitchLib.Models.Client.ChatMessage)">
+            <summary>
+            ChatCommand constructor.
+            </summary>
+            <param name="ircString"></param>
+            <param name="chatMessage"></param>
+        </member>
+        <member name="T:TwitchLib.Models.Client.EmoteSet">
+            <summary>
+            Object representing emote set from a chat message.
+            </summary>
+        </member>
+        <member name="P:TwitchLib.Models.Client.EmoteSet.Emotes">
+            <summary>
+            List containing all emotes in the message.
+            </summary>
+        </member>
+        <member name="P:TwitchLib.Models.Client.EmoteSet.RawEmoteSetString">
+            <summary>
+            The raw emote set string obtained from Twitch, for legacy purposes.
+            </summary>
+        </member>
+        <member name="M:TwitchLib.Models.Client.EmoteSet.#ctor(System.String,System.String)">
+            <summary>
+            Constructor for ChatEmoteSet object.
+            </summary>
+            <param name="emoteSetData"></param>
+            <param name="message"></param>
+        </member>
+        <member name="T:TwitchLib.Models.Client.EmoteSet.Emote">
+            <summary>
+            Object representing an emote in an EmoteSet in a chat message.
+            </summary>
+        </member>
+        <member name="P:TwitchLib.Models.Client.EmoteSet.Emote.Id">
+            <summary>Twitch-assigned emote Id.</summary>
+        </member>
+        <member name="P:TwitchLib.Models.Client.EmoteSet.Emote.Name">
+            <summary>The name of the emote. For example, if the message was "This is Kappa test.", the name would be 'Kappa'.</summary>
+        </member>
+        <member name="P:TwitchLib.Models.Client.EmoteSet.Emote.StartIndex">
+            <summary>Character starting index. For example, if the message was "This is Kappa test.", the start index would be 8 for 'Kappa'.</summary>
+        </member>
+        <member name="P:TwitchLib.Models.Client.EmoteSet.Emote.EndIndex">
+            <summary>Character ending index. For example, if the message was "This is Kappa test.", the start index would be 12 for 'Kappa'.</summary>
+        </member>
+        <member name="P:TwitchLib.Models.Client.EmoteSet.Emote.ImageUrl">
+            <summary>URL to Twitch hosted emote image.</summary>
+        </member>
+        <member name="M:TwitchLib.Models.Client.EmoteSet.Emote.#ctor(System.Int32,System.String,System.Int32,System.Int32)">
+            <summary>
+            Emote constructor.
+            </summary>
+            <param name="emoteId"></param>
+            <param name="name"></param>
+            <param name="emoteStartIndex"></param>
+            <param name="emoteEndIndex"></param>
+        </member>
         <member name="T:TwitchLib.Models.Client.ChatMessage">
             <summary>Class represents ChatMessage in a Twitch channel.</summary>
         </member>
@@ -1946,6 +2105,9 @@
         </member>
         <member name="P:TwitchLib.Models.Client.ChatMessage.ColorHex">
             <summary>Hex representation of username color in chat (THIS CAN BE NULL IF VIEWER HASN'T SET COLOR).</summary>
+        </member>
+        <member name="P:TwitchLib.Models.Client.ChatMessage.Color">
+            <summary>Property representing HEX color as a System.Drawing.Color object.</summary>
         </member>
         <member name="P:TwitchLib.Models.Client.ChatMessage.EmoteSet">
             <summary>Emote Ids that exist in message.</summary>
@@ -2459,6 +2621,9 @@
         <member name="P:TwitchLib.Models.Client.WhisperMessage.ColorHex">
             <summary>Property representing HEX representation of color of username.</summary>
         </member>
+        <member name="P:TwitchLib.Models.Client.WhisperMessage.Color">
+            <summary>Property representing HEX color as a System.Drawing.Color object.</summary>
+        </member>
         <member name="P:TwitchLib.Models.Client.WhisperMessage.Username">
             <summary>Property representing sender Username.</summary>
         </member>
@@ -2665,6 +2830,13 @@
             <param name="channel"></param>
             <returns>Message type (ie NOTICE, PRIVMSG, JOIN, etc)</returns>
         </member>
+        <member name="M:TwitchLib.ChatParsing.getMsgId(System.String)">
+            <summary>
+            Extracts msg-id property from message.
+            </summary>
+            <param name="message"></param>
+            <returns>Message id (ie host_on)</returns>
+        </member>
         <member name="M:TwitchLib.ChatParsing.detectConnected(System.String)">
             <summary>[Works] Parse function to detect connected successfully</summary>
             <param name="message"></param>
@@ -2716,7 +2888,7 @@
             <param name="channels"></param>
             <returns></returns>
         </member>
-        <member name="M:TwitchLib.ChatParsing.detectedIncorrectLogin(System.String,System.Collections.Generic.List{TwitchLib.Models.Client.JoinedChannel})">
+        <member name="M:TwitchLib.ChatParsing.detectedIncorrectLogin(System.String)">
             <summary>[Works] Parse function to detect failed login.</summary>
             <param name="message"></param>
             <param name="channels"></param>
@@ -2806,6 +2978,22 @@
         <member name="M:TwitchLib.ChatParsing.detectedChatColorChanged(System.String,System.Collections.Generic.List{TwitchLib.Models.Client.JoinedChannel})">
             <summary>
             Parse function to detect chat color being changed successfully
+            </summary>
+            <param name="message"></param>
+            <param name="channels"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TwitchLib.ChatParsing.detectedNowHosting(System.String,System.Collections.Generic.List{TwitchLib.Models.Client.JoinedChannel})">
+            <summary>
+            Parse function to detect now hosting event.
+            </summary>
+            <param name="message"></param>
+            <param name="channels"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TwitchLib.ChatParsing.detectedJoinChannelCompleted(System.String)">
+            <summary>
+            Parse function to detect that a 366 has been received indicating completed joining channel
             </summary>
             <param name="message"></param>
             <param name="channels"></param>
@@ -3452,6 +3640,11 @@
             Fires when data is either received or sent.
             </summary>
         </member>
+        <member name="E:TwitchLib.TwitchClient.OnNowHosting">
+            <summary>
+            Fires when client receives notice that a joined channel is hosting another channel.
+            </summary>
+        </member>
         <member name="M:TwitchLib.TwitchClient.#ctor(TwitchLib.Models.Client.ConnectionCredentials,System.String,System.Char,System.Char,System.Boolean)">
             <summary>
             Initializes the TwitchChatClient class.
@@ -3499,11 +3692,6 @@
             <param name="receiver">The receiver of the whisper.</param>
             <param name="message">The message to be sent.</param>
             <param name="dryRun">If set to true, the message will not actually be sent for testing purposes.</param>
-        </member>
-        <member name="M:TwitchLib.TwitchClient.ReplyWhisper(System.String,System.Boolean)">
-            <summary>
-            SendWhisper wrapper method that will send a whisper back to the user who most recently sent a whisper to this bot.
-            </summary>
         </member>
         <member name="M:TwitchLib.TwitchClient.Connect">
             <summary>
@@ -3663,11 +3851,24 @@
             </summary>
             <param name="_logging">Set this true to have raw messages from PubSub system printed to console.</param>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:TwitchLib.TwitchPubSub.ListenToChatModeratorActions(System.Int32,System.Int32,System.String)" -->
-        <!-- Badly formed XML comment ignored for member "M:TwitchLib.TwitchPubSub.ListenToBitsEvents(System.Int32,System.String)" -->
+        <member name="M:TwitchLib.TwitchPubSub.ListenToChatModeratorActions(System.Int32,System.Int32,System.String)">
+            <summary>
+            Sends a request to listenOn timeouts and bans in a specific channel
+            </summary>
+            <param name="myTwitchId">A moderator's twitch acount's ID (can be fetched from TwitchApi)</param>
+            <param name="channelTwitchId">Channel ID who has previous parameter's moderator (can be fetched from TwitchApi)</param>
+            <param name="moderatorOAuth">Moderator OAuth key (can be OAuth key with any scope)</param>
+        </member>
+        <member name="M:TwitchLib.TwitchPubSub.ListenToBitsEvents(System.Int32,System.String)">
+            <summary>
+            Sends request to listenOn bits events in specific channel
+            </summary>
+            <param name="channelTwitchId">Channel Id of channel to listen to bitsOn (can be fetched from TwitchApi)</param>
+            <param name="channelOAuth">OAuth token linked to the channel.</param>
+        </member>
         <member name="M:TwitchLib.TwitchPubSub.ListenToVideoPlayback(System.Int32)">
             <summary>
-            [UNTESTED] Sends request to listenOn video playback events in specific channel
+            Sends request to listenOn video playback events in specific channel
             </summary>
             <param name="channelTwitchId">Channel Id of channel to listen to playback events in.</param>
         </member>

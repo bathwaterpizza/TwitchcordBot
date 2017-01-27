@@ -1,0 +1,33 @@
+[08/01/2017 01:05:46] Inicializando Bots
+[08/01/2017 01:05:57] Inicializando Bots
+[08/01/2017 01:05:57] Conectado a Twitch "Player2Player"
+[08/01/2017 01:05:59] Conectado ao Discord "Player2Player"
+[08/01/2017 16:00:53][Discord] lookez -> usou comando "twitch>>rawmsg test"
+[08/01/2017 16:01:30][Discord] lookez -> usou comando "twitch>>rawmsg test"
+[08/01/2017 16:05:23][Discord] lookez -> usou comando "twitch>>rarwa test"
+[08/01/2017 16:16:07] Inicializando Bots
+[08/01/2017 16:16:08] Conectado a Twitch "Player2Player"
+[08/01/2017 16:16:10] Conectado ao Discord "Player2Player"
+[08/01/2017 16:16:22][Twitch] lookezbr -> usou comando ">>maratona"
+[08/01/2017 16:18:14] Inicializando Bots
+[08/01/2017 16:18:15] Conectado a Twitch "Player2Player"
+[08/01/2017 16:18:17] Conectado ao Discord "Player2Player"
+[08/01/2017 16:51:00] Inicializando Bots
+[08/01/2017 16:51:01] Conectado a Twitch "Player2Player"
+[08/01/2017 16:51:03] Conectado ao Discord "Player2Player"
+[08/01/2017 16:51:12][Twitch] lookezbr -> usou comando "tags>>list"
+[08/01/2017 16:55:26] Inicializando Bots
+[08/01/2017 16:55:39] Inicializando Bots
+[08/01/2017 16:55:40] Conectado a Twitch "Player2Player"
+[08/01/2017 16:56:08] Inicializando Bots
+[08/01/2017 16:56:09] Conectado a Twitch "Player2Player"
+[08/01/2017 17:02:16] Inicializando Bots
+[08/01/2017 17:02:30] Inicializando Bots
+[08/01/2017 17:02:30] Conectado a Twitch "Player2Player"
+[08/01/2017 17:02:31] Conectado ao Discord "Player2Player"
+[08/01/2017 17:04:03] Inicializando Bots
+[08/01/2017 17:04:04] Conectado a Twitch "Player2Player"
+[08/01/2017 17:04:23] Inicializando Bots
+[08/01/2017 17:04:36] Inicializando Bots
+[08/01/2017 17:04:37] Conectado a Twitch "Player2Player"
+[08/01/2017 17:04:38] Conectado ao Discord "Player2Player"
